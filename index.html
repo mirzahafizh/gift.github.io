@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+<body>
+    <h1>Halo Sayang</h1>
+    <h2>Mau hadiah ga?</h2>
+    <div class="button">
+        <button>
+            <a href="flower.html">Klik disini Ya</a>
+        </button>
+        <button id="moveButton"> Ga </button>
+    </div>
+
+    <script>
+        // Get the "Ga" button element
+        var gaButton = document.getElementById("moveButton");
+
+        // Function to move the button to a random position on the screen
+        function moveButton() {
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+
+            var randomX = Math.floor(Math.random() * (screenWidth - 100));
+            var randomY = Math.floor(Math.random() * (screenHeight - 50));
+
+            gaButton.style.position = "absolute";
+            gaButton.style.left = randomX + "px";
+            gaButton.style.top = randomY + "px";
+        }
+
+        // Add a click event listener to the "Ga" button
+        gaButton.addEventListener("click", moveButton);
+    </script>
+</body>
+</html>
